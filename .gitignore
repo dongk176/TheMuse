@@ -1,0 +1,8 @@
+.DS_Store
+node_modules
+.next
+.env
+.env.local
+*.log
+tsconfig.tsbuildinfo
+pnpm-debug.log*
