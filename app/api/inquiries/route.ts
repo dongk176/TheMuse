@@ -6,10 +6,11 @@ import {
   toInquiryInsert,
   validateInquiryForm,
 } from "@/lib/inquiry";
-import { supabaseAdmin } from "@/lib/supabaseAdmin";
+import { getSupabaseAdmin } from "@/lib/supabaseAdmin";
 
 export async function POST(request: Request) {
   try {
+    const supabaseAdmin = getSupabaseAdmin();
     const body = (await request.json()) as InquiryFormValues;
     const { valid, errors } = validateInquiryForm(body);
 
